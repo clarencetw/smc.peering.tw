@@ -1,0 +1,52 @@
+name: Update Incidents Data
+
+on:
+  schedule:
+    - cron: '0 */3 * * *'  # Run every 3 hours
+  workflow_dispatch:  # Allow manual trigger
+  workflow_call:  # Allow being called by other workflows
+
+permissions:
+  contents: write
+
+jobs:
+  update-incidents:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+          cache: 'pip'
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Generate incidents.json
+        run: python convert_incidents.py
+
+      - name: Setup gh-pages branch
+        run: |
+          git fetch origin gh-pages || git checkout --orphan gh-pages
+          git checkout gh-pages || git checkout -b gh-pages
+          git pull origin gh-pages || true
+
+      - name: Update incidents.json
+        run: |
+          mkdir -p data
+          mv incidents.json data/incidents.json
+
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "007seadog@gmail.com"
+          git config --local user.name "seadog007 with GitHub Action"
+          git add data/incidents.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update incidents data" && git push origin gh-pages) 

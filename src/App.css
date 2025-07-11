@@ -1,0 +1,102 @@
+.app-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: #1a1a1a;
+  overflow: hidden;
+}
+
+.map-section {
+  width: 100%;
+  height: 100%;
+}
+
+.incident-section {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 30%;
+  min-width: 400px;
+  height: calc(100% - 60px);
+  z-index: 1000;
+}
+
+.timeline-button {
+  position: absolute;
+  top: calc(100dvh - 70px);
+  left: 80px;
+  z-index: 1100;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px #00000033, 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+  padding: 0.75rem;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.timeline-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.timeline-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #fff;
+}
+
+.about-button {
+  position: absolute;
+  top: calc(100dvh - 70px);
+  padding-bottom: env(safe-area-inset-bottom);
+  left: 20px;
+  z-index: 1100;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+  padding: 0.75rem;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.about-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.about-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #fff;
+}
+
+.incident-list-container-outer {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.incident-button {
+  position: absolute;
+  top: calc(100dvh - 70px);
+  padding-bottom: env(safe-area-inset-bottom);
+  left: 140px;
+  z-index: 1100;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+  padding: 0.75rem;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.incident-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #fff;
+}
