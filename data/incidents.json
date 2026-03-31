@@ -695,7 +695,17 @@
     "cableid": "apcn2",
     "segment": "apcn2-seg-6",
     "title": "APCN2 日本方向斷線",
-    "description": "From 中華電信公告「中華電信公司亞太海纜網路二號 (APCN2) S6 區段於 3 月 21 日發生芯線障礙，訊務已於第一時間疏轉至其他國際海纜，客戶服務不受影響。 中華電信公司技術團隊已派員全力搶修中，敬請客戶安心」",
+    "description": "From 中華電信公告「中華電信公司亞太海纜網路二號 (APCN2) S6 區段於 3 月 21 日發生芯線障礙，訊務已於第一時間疏轉至其他國際海纜，客戶服務不受影響。 中華電信公司技術團隊已派員全力搶修中，敬請客戶安心」From 數位發展部「距淡水沙崙約62.5公里處斷纜」",
+    "reparing_at": "",
+    "resolved_at": ""
+  },
+  {
+    "date": "2026-03-30T00:00:00+08:00",
+    "status": "partial_disconnected",
+    "cableid": "twtm3",
+    "segment": "twtm3-mt",
+    "title": "台馬三號芯線受損",
+    "description": "From 數位發展部「距東引約2.64公里處發生部分芯線受損障礙」",
     "reparing_at": "",
     "resolved_at": ""
   }
